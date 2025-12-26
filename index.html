@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Photobooth</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app pink">
+
+  <div class="camera-box">
+    <video id="video" autoplay></video>
+    <div id="countdown">3</div>
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <button id="startSession" class="start-btn">START</button>
+
+  <!-- Left vertical controls -->
+  <div class="filter-bar vertical">
+    <div class="filter-item active" data-filter="none" data-frame="none">✨</div>
+    <div class="filter-item" data-filter="grayscale(100%)" data-frame="none">⚫</div>
+    <div class="filter-item" data-filter="sepia(90%)" data-frame="soft">🟤</div>
+    <div class="filter-item" data-filter="contrast(120%)" data-frame="film">🎞</div>
+    <div class="filter-item" data-filter="brightness(115%)" data-frame="soft">☀️</div>
+
+    <div class="filter-item theme pink-dot" data-theme="pink"></div>
+    <div class="filter-item theme cream-dot" data-theme="cream"></div>
+    <div class="filter-item theme mint-dot" data-theme="mint"></div>
+  </div>
+
+  <div class="mode-bar">
+    <button class="active" data-mode="strip">Strip</button>
+  </div>
+
+  <a id="download" download="photobooth.png" class="download">Download</a>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
